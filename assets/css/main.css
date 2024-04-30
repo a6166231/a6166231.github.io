@@ -1,0 +1,115 @@
+:root {
+  --title-scale-x: 1,
+}
+
+div {
+  color: #fff
+}
+
+body {
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.cmd-window {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  min-height: 90%;
+  font-family: 'Consolas', monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 300px;
+  max-width: 90%;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.custom-title {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  scale: var(--title-scale-x);
+}
+
+.cmd-prompt {
+  display: inline-block;
+  font-family: 'Consolas', monospace;
+  margin-bottom: 10px;
+}
+
+.cmd-cursor {
+  content: '|';
+  color: yellow;
+  animation: blink 1s infinite;
+  position: absolute;
+  right: 0;
+}
+
+.cmd-body {
+  flex: 1;
+  padding: 10px 10px 10px 10px;
+  height: 100%;
+  overflow-y: auto;
+  display: inline-table;
+}
+
+#inputArea {
+  height: 50px;
+}
+
+#outputArea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+#cmd-menu {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.menu-link:hover,
+.post-link:hover {
+  text-shadow: 1px 1px 5px #ffffff;
+  transform: scale(1.2, 1.2) translateY(-2px);
+  transition: all .3s;
+  color: #8fdf9f;
+}
+
+a {
+  -webkit-tap-highlight-color: #fff;
+  text-decoration: none
+}
+
+a:visited {
+  color: #fff;
+}
+
+.page-content {
+  height: 90%;
+  width: 100%;
+  display: flex;
+}
+
+.post-link {
+  color: rgb(119, 255, 255);
+  margin-left: 0px;
+}
+
+.post-meta {
+  margin-right: 0px;
+  float: right !important;
+}
