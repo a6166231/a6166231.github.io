@@ -1,20 +1,15 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="../../assets/css/main.css">
-
 <div class="wrapper">
     <div class="home">
         <ul class="post-list">
+            {% for post in site.posts || {} %}
             <li>
-                <h3>
-                    <a class="post-link" href="../../jekyll/update/2024/04/30/welcome-to-jekyll.html">
-                        Welcome to Jekyll!
-                    </a>
-                </h3>
-                <span class="post-meta">Apr 30, 2024</span>
+                <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
+                {{ post.excerpt }}
             </li>
+            {% endfor %}
         </ul>
-
     </div>
 </div>
