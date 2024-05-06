@@ -4,9 +4,7 @@
   --view-width: 1px;
 }
 
-div,
-p,
-span {
+* {
   color: #fff
 }
 
@@ -117,7 +115,7 @@ body {
 
 a {
   -webkit-tap-highlight-color: #fff;
-  text-decoration: none
+  text-decoration: none;
 }
 
 a:visited {
@@ -138,4 +136,58 @@ a:visited {
 .post-meta {
   margin-right: 0px;
   float: right !important;
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blog-head {
+  font-size: 18px;
+  font-weight: 5px;
+  white-space: pre-line;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 信息块 */
+.info-track {
+  background-color: #2a7502;
+  font-size: 16px;
+  line-height: 30px;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+  transition: all 500ms linear;
+  white-space: pre-line;
+}
+
+.info-track>a {
+  text-decoration: underline !important;
+  font-size: 17px;
+  margin: 5px 5px;
+}
+
+.info-track:hover {
+  animation: info-track-ani 0.5s forwards;
+}
+
+@keyframes info-track-ani {
+  from {
+    background-color: #2a7502;
+    border-radius: 5px;
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    background-color: #8ac303;
+    border-radius: 15px;
+    transform: translate(-10px, 0px);
+  }
 }

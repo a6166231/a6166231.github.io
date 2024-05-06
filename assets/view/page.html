@@ -8,6 +8,7 @@ layout: default
             <li>
                 <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
                 {{ post.excerpt }}
+                <span class="post-meta">{{ post.time }}</span>
             </li>
             {% endfor %}
         </ul>
