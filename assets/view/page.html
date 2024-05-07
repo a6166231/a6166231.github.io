@@ -6,8 +6,13 @@ layout: default
         <ul class="post-list">
             {% for post in site.posts || {} %}
             <li>
-                <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
-                {{ post.excerpt }}
+                {% if post.small %}
+                    <h2><a class="post-link" style="user-select:none">{{ post.title }}</a></h2>
+                    <div class="info-track">{{ post.excerpt|newline_to_br }}</div>
+                {% else %}
+                    <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
+                    {{ post.excerpt }}
+                {% endif %}
                 <span class="post-meta">{{ post.time }}</span>
             </li>
             {% endfor %}

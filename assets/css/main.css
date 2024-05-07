@@ -5,7 +5,7 @@
 }
 
 * {
-  color: #fff
+  color: #fff;
 }
 
 body {
@@ -165,6 +165,9 @@ a:visited {
   margin: auto;
   padding: 10px 10px 10px 10px;
   transition: all 500ms linear;
+}
+
+.white-line {
   white-space: pre-line;
 }
 
@@ -190,4 +193,8 @@ a:visited {
     border-radius: 15px;
     transform: translate(-10px, 0px);
   }
+}
+
+.post-link-small {
+  user-select: none
 }
