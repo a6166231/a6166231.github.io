@@ -113,7 +113,7 @@ body {
   color: #8fdf9f !important;
 }
 
-a {
+.menu-link > a {
   -webkit-tap-highlight-color: #fff;
   text-decoration: none;
 }
@@ -131,6 +131,8 @@ a:visited {
 .post-link {
   color: rgb(119, 255, 255) !important;
   margin-left: 0px;
+  -webkit-tap-highlight-color: #fff;
+  text-decoration: none;
 }
 
 .post-meta {
@@ -197,4 +199,13 @@ a:visited {
 
 .post-link-small {
   user-select: none
+}
+
+.github-link {
+  color: rgb(226, 106, 218);
+  font-size: 26px;
+  box-shadow: #2a7502;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

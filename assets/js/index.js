@@ -19,7 +19,6 @@ function addListener() {
 function addWindowListener() {
     function adjustScale() {
         document.documentElement.style.setProperty('--title-scale-x', Math.min(1, window.innerWidth / TitleWidth));
-        console.log(window.innerWidth)
         document.documentElement.style.setProperty('--view-width', window.innerWidth + 'px');
     }
     // 初始化和监听窗口大小变化
@@ -36,7 +35,6 @@ function addIFrameListener() {
         cssLink.rel = "stylesheet";
         cssLink.type = "text/css";
         body.appendChild(cssLink);
-
         updateViewMiniState(iframe.contentWindow.document.location.search)
     }
 }
