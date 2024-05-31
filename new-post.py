@@ -1,10 +1,11 @@
+#!/usr/bin/python
+# encoding:utf-8
 import datetime, sys, os
 
 if getattr(sys, 'frozen', False):
     absPath = os.path.dirname(os.path.abspath(sys.executable))
 elif __file__:
     absPath = os.path.dirname(os.path.abspath(__file__))
-
 
 def newPost():
     postname = input('postname: ')
@@ -28,14 +29,14 @@ def newPost():
 
     print(date)
     val = f"""---
-title: {title}
+title: "{title}"
 time: {stime}
 layout: post
-{ssmall}excerpt: {excerpt}
+{ssmall}excerpt: "{excerpt}"
 ---{sblog}
 """
 
-    f = open(f'{out_path}.md', 'w')
+    f = open(f'{out_path}.md', 'w', encoding='utf-8')
     f.write(val)
     f.close()
 
