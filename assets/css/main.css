@@ -4,7 +4,7 @@
   --view-width: 1px;
 }
 
-* {
+*:not(.code-block) {
   color: #fff;
 }
 
@@ -113,7 +113,7 @@ body {
   color: #8fdf9f !important;
 }
 
-.menu-link > a {
+.menu-link>a {
   -webkit-tap-highlight-color: #fff;
   text-decoration: none;
 }
@@ -209,3 +209,12 @@ a:visited {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+/* .code-block {
+  background-color: #2d2d2d;
+  padding: 10px;
+  font-family: Consolas, 'Courier New', monospace;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+} */

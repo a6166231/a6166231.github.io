@@ -24,6 +24,7 @@ function addWindowListener() {
     // 初始化和监听窗口大小变化
     window.onload = adjustScale;
     window.onresize = adjustScale;
+
 }
 
 function addIFrameListener() {
@@ -36,6 +37,9 @@ function addIFrameListener() {
         cssLink.type = "text/css";
         body.appendChild(cssLink);
         updateViewMiniState(iframe.contentWindow.document.location.search)
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
     }
 }
 
